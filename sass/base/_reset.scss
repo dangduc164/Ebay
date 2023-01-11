@@ -64,5 +64,10 @@ input, textarea {
 	padding: 0;
 }
 
+.btn{
+	&:focus,&:focus-visible{
+		box-shadow: none
+	}
+}
 @include clearfixBase;
 

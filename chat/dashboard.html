@@ -44,11 +44,20 @@
                                 <span>26</span>
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./../profile/info.html">通知</a>
-                                <a class="dropdown-item" href="#">自動返信</a>
-                                <a class="dropdown-item" href="#">テンプレート</a>
-                                <a class="dropdown-item" href="#">サブアカウント管理</a>
-                                <a class="dropdown-item" href="#">連携したEbayアカウント管理</a>
+                                <a class="dropdown-item user-info" href="#">
+                                    <div class="user-info__inner">
+                                        <img src="./../assets/img/dashboard/img_dropdown_user.png" alt="">
+                                        <p>Hoàng Kiều Như</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="./../assets/img/dashboard/icn_upgrade.svg" alt="">
+                                    アカウントをアップグレード
+                                </a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-delete">
+                                    <img src="./../assets/img/dashboard/icn_logout.svg" alt="">
+                                    ログアウト
+                                </a>
                             </div>
                         </li>
                         <li>
@@ -95,10 +104,48 @@
                 </div>
                 <a href="#" class="p-dashboard__nav-top__toggle item-sp">
                     <img src="./../assets/img/dashboard/icn_grid.svg" alt="">
+                    <img src="./../assets/img/dashboard/icn_close_canvas.svg" alt="">
                 </a>
+                <div class="p-dashboard__nav-top__canvas">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_canvas_01.svg" alt="">
+                                <span>Chat</span>
+                                <div>25</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_canvas_02.svg" alt="">
+                                <span>Task</span>
+                                <div>5</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_canvas_03.svg" alt="">
+                                <span>Trouble</span>
+                                <div>8</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_canvas_04.svg" alt="">
+                                <span>Thông báo</span>
+                                <div>2</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_canvas_05.svg" alt="">
+                                <span>Cài đặt</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        
     </div>
     <section class="p-dashboard__main">
         <div class="container-fluid">
@@ -1049,10 +1096,18 @@
                                 <div class="messages__details">
                                     <div class="message">
                                         <div class="message__img">
-                                            <img src="./../assets/img/dashboard/img_shoes_01.jpg" alt="">
-                                            <img src="./../assets/img/dashboard/img_shoes_02.jpg" alt="">
-                                            <img src="./../assets/img/dashboard/img_shoes_03.jpg" alt="">
-                                            <img src="./../assets/img/dashboard/img_shoes_04.jpg" alt="">
+                                            <a href="#" data-toggle="modal" data-target="#modal-image">
+                                                <img src="./../assets/img/dashboard/img_shoes_01.jpg" alt="">
+                                            </a>
+                                            <a href="#" data-toggle="modal" data-target="#modal-image">
+                                                <img src="./../assets/img/dashboard/img_shoes_02.jpg" alt="">
+                                            </a>
+                                            <a href="#" data-toggle="modal" data-target="#modal-image">
+                                                <img src="./../assets/img/dashboard/img_shoes_03.jpg" alt="">
+                                            </a>
+                                            <a href="#" data-toggle="modal" data-target="#modal-image">
+                                                <img src="./../assets/img/dashboard/img_shoes_04.jpg" alt="">
+                                            </a>
                                         </div>
                                         Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
                                     </div>
@@ -1086,7 +1141,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-message__translate">
+                                        <div class="form-message__translate c-switch">
                                             <label>すべて翻訳</label>
                                             <input type="checkbox" checked data-toggle="toggle" data-size="sm">
                                         </div>
@@ -1224,9 +1279,9 @@
                         <div id="accordion6" class="task">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="card-link c-dropdown-toggle" data-toggle="collapse" href="#collapse6">タスク</a>
+                                    <a class="card-link c-dropdown-toggle collapsed" data-toggle="collapse" href="#collapse6">タスク</a>
                                 </div>
-                                <div id="collapse6" class="collapse show" data-parent="#accordion6">
+                                <div id="collapse6" class="collapse" data-parent="#accordion6">
                                     <div class="card-body">
                                         <div class="task__add-task">
                                             <img src="./../assets/img/dashboard/icn_task.svg" alt="">
@@ -1261,10 +1316,14 @@
                                                         <img src="./../assets/img/dashboard/icn_task_calendar.svg" alt="">
                                                         <span>期限</span>
                                                     </div>
-                                                    <div class="task__time__date">12月27日</div>
+                                                    <div class="task__time__date">
+                                                        <input type="date" name="" id="">
+                                                    </div>
                                                     <div class="task__time__user">
-                                                        <span>13:00</span>
-                                                        <img src="./../assets/img/dashboard/icn_task_down.svg" alt="">
+                                                        <select name="" id="">
+                                                            <option value="">13:00</option>
+                                                            <option value="">14:00</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="task__group-btn">
@@ -1373,13 +1432,106 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div id="accordion7" class="trouble">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link c-dropdown-toggle" data-toggle="collapse" href="#collapse7">トラブル</a>
+                                </div>
+                                <div id="collapse7" class="collapse show" data-parent="#accordion7">
+                                    <div class="card-body">
+                                        <div class="trouble__list">
+                                            <div class="trouble__item">
+                                                <div class="trouble__item__top">
+                                                    <div class="trouble__item__users">
+                                                        <div class="trouble__item__users-img">
+                                                            <img src="./../assets/img/dashboard/img_trouble_user.svg" alt="">
+                                                        </div>
+                                                        <div class="trouble__item__users-info">
+                                                            <h5>Laney Gray</h5>
+                                                            <p>18:00</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="trouble__item__delete" data-toggle="modal" data-target="#modal-delete">
+                                                        <img src="./../assets/img/dashboard/icn_trouble_close.svg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="trouble__item__body">
+                                                    <div class="trouble__item__body__inner">
+                                                        <h5 class="c-red">未着リクエスト</h5>
+                                                        <p>The buyer didnʼt receive the item</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="trouble__item">
+                                                <div class="trouble__item__top">
+                                                    <div class="trouble__item__users">
+                                                        <div class="trouble__item__users-img">
+                                                            <img src="./../assets/img/dashboard/img_trouble_user.svg" alt="">
+                                                        </div>
+                                                        <div class="trouble__item__users-info">
+                                                            <h5>Laney Gray</h5>
+                                                            <p>18:00</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="trouble__item__delete" data-toggle="modal" data-target="#modal-delete">
+                                                        <img src="./../assets/img/dashboard/icn_trouble_close.svg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="trouble__item__body">
+                                                    <div class="trouble__item__body__inner">
+                                                        <h5 class="c-red">未着リクエスト</h5>
+                                                        <p>The buyer didnʼt receive the item</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="trouble__item">
+                                                <div class="trouble__item__top">
+                                                    <div class="trouble__item__users">
+                                                        <div class="trouble__item__users-img">
+                                                            <img src="./../assets/img/dashboard/img_trouble_user.svg" alt="">
+                                                        </div>
+                                                        <div class="trouble__item__users-info">
+                                                            <h5>Laney Gray</h5>
+                                                            <p>18:00</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="trouble__item__delete" data-toggle="modal" data-target="#modal-delete">
+                                                        <img src="./../assets/img/dashboard/icn_trouble_close.svg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="trouble__item__body">
+                                                    <div class="trouble__item__body__inner">
+                                                        <h5 class="c-red">未着リクエスト</h5>
+                                                        <p>The buyer didnʼt receive the item</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div> 
                     </div>
-                    
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal image -->
+    <div class="modal fade" id="modal-image" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-close" data-dismiss="modal">
+                    <img src="./../assets/img/dashboard/icn_close_modal.svg" alt="">
+                </div>
+                <div class="modal-body">
+                    <img src="./../assets/img/dashboard/img_shoes_big.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
 
     <!-- Modal edit product -->
     <div class="modal fade" id="modal-edit-product" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1390,11 +1542,35 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-3">
-                            <img src="./../assets/img/dashboard/img_product_cover.jpg" alt="">
+                        <div class="col-3 col-left">
+                            <div class="image">
+                                <img class="w-100" src="./../assets/img/dashboard/img_product_cover.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="col-9">
-                            col right
+                        <div class="col-9 col-right">
+                            <form>
+                                <div class="form-group">
+                                    <label>商品</label>
+                                    <input type="text" class="form-control" value="フラットソールのメンズハイヒールウルザンスニーカー、メンズシューズKATEZA43">
+                                </div>
+                                <div class="form-group price">
+                                    <label>商品</label>
+                                    <input type="text" class="form-control" value="3000円">
+                                </div>
+                                <div class="form-group c-switch">
+                                    <input type="checkbox" data-toggle="toggle" data-size="sm">
+                                    <span>オファー設定</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>最低価格</label>
+                                    <input type="text" class="form-control" value="フラットソールのメンズハイヒールウルザンスニーカー、メンズシューズKATEZA43">
+                                </div>
+                                <div class="form-group">
+                                    <label>自動承認価格</label>
+                                    <input type="text" class="form-control" value="フラットソールのメンズハイヒールウルザンスニーカー、メンズシューズKATEZA43">
+                                </div>
+                                <button type="submit" class="btn btn-primary">保存</button>
+                            </form>
                         </div>
                     </div>
                 </div>

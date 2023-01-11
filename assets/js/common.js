@@ -25,9 +25,13 @@ $(document).ready(function() {
         $(this).toggleClass('show')
     })
 
+    $(".p-dashboard__nav-top__toggle").click(function() {
+        $(this).toggleClass("show")
+    })
 
-    $(".radio-card").hover(function() {
-        $(this).parent().parent().find(".p-list-accounts-linked__main__box-content").toggleClass('show')
+
+    $(".p-list-accounts-linked__main__box").hover(function() {
+        $(this).find('.p-list-accounts-linked__main__box-content').toggleClass('show')
     })
 
     //show tooltip input 

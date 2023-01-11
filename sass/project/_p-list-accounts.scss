@@ -45,7 +45,7 @@
                             position: relative;
                             &.active {
                                 background: #FFF6FF;
-                                color: #852988;
+                                color: $cBase;
                             }
                             @include brSpLandscape {
                                 box-shadow: none;
@@ -184,7 +184,7 @@
                             justify-content: center;
                             &.btn-delete {
                                 &:hover {
-                                    background-color: rgba($color: #852988, $alpha: 0.1);
+                                    background-color: rgba($color: $cBase, $alpha: 0.1);
                                 }
                             }
                             &:hover {

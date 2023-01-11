@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ebay Tool</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../assets/css/slick.css">
+    <link href="./../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="p-dashboard">
+    <div class="p-dashboard__nav-top">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <a href="#" class="p-dashboard__nav-top__logo">
+                    <img src="./../assets/img/dashboard/fig_logo.svg" alt="">
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="p-dashboard__nav-top__news item-sp">News</a>
+                <div class="p-dashboard__nav-top__search item-pc">
+                    <input type="text" placeholder="バイヤー名・SKU・タイトル・注文番号を検索">
+                    <button>
+                        <img src="./../assets/img/dashboard/icn_search.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-dashboard__nav-top__group-right item-pc">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_building.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="dropdown dropdown-mess">
+                            <a href="#" data-toggle="dropdown" data-display="static">
+                                <img src="./../assets/img/dashboard/icn_mess.svg" alt="">
+                                <span>26</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./../profile/info.html">通知</a>
+                                <a class="dropdown-item" href="#">自動返信</a>
+                                <a class="dropdown-item" href="#">テンプレート</a>
+                                <a class="dropdown-item" href="#">サブアカウント管理</a>
+                                <a class="dropdown-item" href="#">連携したEbayアカウント管理</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_check.svg" alt="">
+                                <span>2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_warning.svg" alt="">
+                                <span>6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_bell.svg" alt="">
+                                <span>12</span>
+                            </a>
+                        </li>
+                        <li class="dropdown dropdown-setting">
+                            <a href="#" data-toggle="dropdown" data-display="static">
+                                <img src="./../assets/img/dashboard/icn_setting.svg" alt="">
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./../profile/info.html">通知</a>
+                                <a class="dropdown-item" href="#">自動返信</a>
+                                <a class="dropdown-item" href="#">テンプレート</a>
+                                <a class="dropdown-item" href="#">サブアカウント管理</a>
+                                <a class="dropdown-item" href="#">連携したEbayアカウント管理</a>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-user">
+                            <a href="#" class="p-dashboard__nav-top__user" data-toggle="dropdown" data-display="static">
+                                <img src="./../assets/img/dashboard/img_user.png" alt="">
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./../profile/info.html">プロフィール</a>
+                                <a class="dropdown-item" href="#">パスワード変更</a>
+                                <a class="dropdown-item" href="#">ヘルプ</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="p-dashboard__nav-top__toggle item-sp">
+                    <img src="./../assets/img/dashboard/icn_grid.svg" alt="">
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <section class="p-dashboard__main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 col-one">
+                    <div class="dropdown">
+                        <button type="button" class="c-dropdown-toggle" data-toggle="dropdown">
+                            <img src="./../assets/img/dashboard/img_ebay.png" alt="">
+                            <span>ebayアカウント1</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                                <span>すべて</span>
+                            </a>
+                            <a class="dropdown-item selected" href="#">
+                                <img src="./../assets/img/dashboard/img_ebay.png" alt="">
+                                <span>ebayアカウント1</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./../assets/img/dashboard/img_ebay_02.png" alt="">
+                                <span>ebayアカウント2</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./../assets/img/dashboard/img_ebay_03.png" alt="">
+                                <span>ebayアカウント3</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./../assets/img/dashboard/img_ebay_04.png" alt="">
+                                <span>ebayアカウント4</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="c-dropdown-toggle" data-toggle="dropdown">
+                            <span>すべて</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item selected" href="#">
+                                <div class="number">100</div>
+                                <span>すべて</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="number">14</div>
+                                <span>新着順</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="number">31</div>
+                                <span>ブックマーク</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="number">22</div>
+                                <span>タスク</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="number">12</div>
+                                <span>タスク</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="number">17</div>
+                                <span>タスク</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="accordion" class="item__list">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link c-dropdown-toggle" data-toggle="collapse" href="#collapseOne">Tất cả</a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_02.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_01.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Giày sneaker nam cao cổ ullzang đế abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_02.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_02.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">6</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item__img">
+                                                <img src="./../assets/img/dashboard/img_item_03.jpg" alt="">
+                                            </div>
+                                            <div class="item__name">Nike Court Legacy Lift DM7356405 abcxyx</div>
+                                            <div class="item__action">
+                                                <div class="item__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="item__number">3</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                </div>
+                <div class="col-12 col-md-6 col-two">
+                    <div id="accordion2" class="user__list">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link c-dropdown-toggle" data-toggle="collapse" href="#collapse2">Tất cả</a>
+                            </div>
+                            <div id="collapse2" class="collapse show" data-parent="#accordion2">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box_open.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                        <li class="active">
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                    <img src="./../assets/img/dashboard/icn_box_black.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                    <img src="./../assets/img/dashboard/icn_send_mail_02.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box_open.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box_open.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box_open.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box_open.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box_open.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_01.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">00:01</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_02.png" alt="">
+                                                <span><img src="./../assets/img/dashboard/icn_r.svg" alt=""></span>
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_box_open.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">05:00</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user__img">
+                                                <img src="./../assets/img/dashboard/img_user_03.png" alt="">
+                                            </div>
+                                            <div class="user__name">
+                                                <span>Laney Gray</span>
+                                                <div>
+                                                    <img src="./../assets/img/dashboard/icn_send_mail.svg" alt="">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="user__action">
+                                                <div class="user__action-top">
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_favorite_01.svg" alt=""></a>
+                                                    <a href="#"><img src="./../assets/img/dashboard/icn_item_check_01.svg" alt=""></a>
+                                                </div>
+                                                <div class="user__number">8</div>
+                                                <div class="user__time">08:30</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-12 col-md-6 col-three">
+                    <div class="screen">
+                        <div class="conversation">
+                            <!-- received -->
+                            <div class="messages messages--received">
+                                <div class="messages__avatar">
+                                    <img src="./../assets/img/dashboard/img_avatar_01.png" alt="">
+                                </div>
+                                <div class="messages__details">
+                                    <div class="message">こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは</div>
+                                    <div class="message__bottom">
+                                        <a href="#" class="message__translate">
+                                            <img src="./../assets/img/dashboard/icn_translate.svg" alt="">
+                                        </a>
+                                        <div class="message__time">2022年12月20日　<span>13:30</span></div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- sent -->
+                            <div class="messages messages--sent">
+                                <div class="messages__avatar">
+                                    <img src="./../assets/img/dashboard/img_avatar_02.png" alt="">
+                                </div>
+                                <div class="messages__details">
+                                    <div class="message">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum</div>
+                                    <div class="message__bottom">
+                                        <div class="message__time">2022年12月20日　<span>13:30</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- received -->
+                            <div class="messages messages--received">
+                                <div class="messages__avatar">
+                                    <img src="./../assets/img/dashboard/img_avatar_01.png" alt="">
+                                </div>
+                                <div class="messages__details">
+                                    <div class="message">こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは</div>
+                                    <div class="message__bottom">
+                                        <a href="#" class="message__translate">
+                                            <img src="./../assets/img/dashboard/icn_translate.svg" alt="">
+                                        </a>
+                                        <div class="message__time">2022年12月20日　<span>13:30</span></div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- sent -->
+                            <div class="messages messages--sent">
+                                <div class="messages__avatar">
+                                    <img src="./../assets/img/dashboard/img_avatar_02.png" alt="">
+                                </div>
+                                <div class="messages__details">
+                                    <div class="message">
+                                        <div class="message__img">
+                                            <img src="./../assets/img/dashboard/img_shoes_01.jpg" alt="">
+                                            <img src="./../assets/img/dashboard/img_shoes_02.jpg" alt="">
+                                            <img src="./../assets/img/dashboard/img_shoes_03.jpg" alt="">
+                                            <img src="./../assets/img/dashboard/img_shoes_04.jpg" alt="">
+                                        </div>
+                                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
+                                    </div>
+                                    <div class="message__bottom">
+                                        <div class="message__time">2022年12月20日　<span>13:30</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form-message" id="form-message">
+                            <div class="form-message__top">
+                                <div class="row">
+                                    <div class="col-8 col-left">
+                                        <div class="form-message__group-icons">
+                                            <a href="#">
+                                                <span>画像をアップロード</span>
+                                                <img src="./../assets/img/dashboard/icn_form_img.svg" alt="">
+                                            </a>
+                                            <a href="#" data-toggle="modal" data-target="#modal-template">
+                                                <span>テンプレート</span>
+                                                <img src="./../assets/img/dashboard/icn_form_book.svg" alt="">
+                                            </a>
+
+                                            <div class="form-message__group-icons__translate">
+                                                <a href="#">
+                                                    <img src="./../assets/img/dashboard/icn_form_translate.svg" alt="">
+                                                </a>
+                                                <div class="form-message__group-icons__translate__tooltip">
+                                                    <span>こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは, こんにちは</span>
+                                                    <a href="#" class="btn-confirm">確定</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-message__translate">
+                                            <label>すべて翻訳</label>
+                                            <input type="checkbox" checked data-toggle="toggle" data-size="sm">
+                                        </div>
+                                        <div class="form-message__img">
+                                            <img src="./../assets/img/dashboard/img_shoes_01.jpg" alt="">
+                                            <img src="./../assets/img/dashboard/img_shoes_02.jpg" alt="">
+                                            <img src="./../assets/img/dashboard/img_shoes_03.jpg" alt="">
+                                            <img src="./../assets/img/dashboard/img_shoes_04.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-4 col-right">
+                                        <button type="submit">
+                                            <img src="./../assets/img/dashboard/icn_send.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="" id="" cols="30" rows="3" placeholder="メッセージを入力"></textarea>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-four">
+                    <div class="col-four__content">
+                        <div id="accordion4" class="product">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link c-dropdown-toggle collapsed" data-toggle="collapse" href="#collapse4">商品情報</a>
+                                </div>
+                                <div id="collapse4" class="collapse" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <div class="product__img">
+                                            <img src="./../assets/img/dashboard/img_product_cover.jpg" alt="">
+                                        </div>
+                                        <a href="#" class="product__btn-edit" data-toggle="modal" data-target="#modal-edit-product">
+                                            <img src="./../assets/img/dashboard/icn_edit.svg" alt="">
+                                        </a>
+                                        <div class="product__info">
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <div class="product__info__label">日付</div>
+                                                    <div class="product__info__value">2022/10/30</div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="product__info__label">商品番号</div>
+                                                    <div class="product__info__value c-blue text-underline">353814923092</div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div class="product__info__label">SKU</div>
+                                                    <div class="product__info__value">N0017</div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="product__info__label">価格</div>
+                                                    <div class="product__info__value c-red">3000円</div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="product__info__label">商品</div>
+                                                    <div class="product__info__value lh20">フラットソールのメンズハイヒールウルザンスニーカー、メンズシューズKATEZA43</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div id="accordion5" class="buyer">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link c-dropdown-toggle collapsed" data-toggle="collapse" href="#collapse5">バイヤー名</a>
+                                </div>
+                                <div id="collapse5" class="collapse" data-parent="#accordion5">
+                                    <div class="card-body">
+                                        <div class="buyer__info">
+                                            <ul>
+                                                <li>
+                                                    <img src="./../assets/img/dashboard/icn_user.svg" alt="">
+                                                    <div class="c-blue">Laney Gray<span class="c-grey">(4)</span></div>
+                                                </li>
+                                                <li>
+                                                    <img src="./../assets/img/dashboard/icn_baseline-phone.svg" alt="">
+                                                    <div>+1 212 8772900</div>
+                                                </li>
+                                                <li>
+                                                    <img src="./../assets/img/dashboard/icn_round-email.svg" alt="">
+                                                    <div>United States</div>
+                                                </li>
+                                                <li>
+                                                    <img src="./../assets/img/dashboard/icn_location.svg" alt="">
+                                                    <div>490 Post St, Suite 900, San Francisco, CA</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buyer__history">
+                                            <div class="buyer__history__title">
+                                                <img src="./../assets/img/dashboard/icn_history.svg" alt="">
+                                                <div>
+                                                    <div class="buyer__history__title-name">購入履歴</div>
+                                                    <div class="buyer__history__title-price">50000円 <span class="c-grey">(6)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="buyer__history__list">
+                                                <div class="buyer__history__item">
+                                                    <div class="buyer__history__img">
+                                                        <img src="./../assets/img/dashboard/img_product_history_01.jpg" alt="">
+                                                    </div>
+                                                    <div class="buyer__history__info">
+                                                        <a href="#">Nike Court Legacy Lift DM7356405...</a>
+                                                        <p>ID: <span class="c-blue">394335326720</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="buyer__history__item">
+                                                    <div class="buyer__history__img">
+                                                        <img src="./../assets/img/dashboard/img_product_history_01.jpg" alt="">
+                                                    </div>
+                                                    <div class="buyer__history__info">
+                                                        <a href="#">Nike Court Legacy Lift DM7356405...</a>
+                                                        <p>ID: <span class="c-blue">394335326720</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="buyer__history__item">
+                                                    <div class="buyer__history__img">
+                                                        <img src="./../assets/img/dashboard/img_product_history_01.jpg" alt="">
+                                                    </div>
+                                                    <div class="buyer__history__info">
+                                                        <a href="#">Nike Court Legacy Lift DM7356405...</a>
+                                                        <p>ID: <span class="c-blue">394335326720</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div id="accordion6" class="task">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link c-dropdown-toggle" data-toggle="collapse" href="#collapse6">タスク</a>
+                                </div>
+                                <div id="collapse6" class="collapse show" data-parent="#accordion6">
+                                    <div class="card-body">
+                                        <div class="task__add-task">
+                                            <img src="./../assets/img/dashboard/icn_task.svg" alt="">
+                                            <span>タスクを追加</span>
+                                            <a href="#" data-toggle="collapse" data-target="#add-task">
+                                                <img src="./../assets/img/dashboard/icn_plus.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <div id="add-task" class="collapse">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>タスク名</label>
+                                                    <input type="text" class="form-control" placeholder="キャンセル">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>内容</label>
+                                                    <textarea class="form-control" placeholder="キャンセル理由確認中"></textarea>
+                                                </div>
+                                                <div class="task__to">
+                                                    <div class="task__to__label">
+                                                        <img src="./../assets/img/dashboard/icn_two_user.svg" alt="">
+                                                        <span>担当者</span>
+                                                    </div>
+                                                    <div class="task__to__user">
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                        <span>田中太郎</span>
+                                                        <img src="./../assets/img/dashboard/icn_task_down.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="task__time">
+                                                    <div class="task__time__label">
+                                                        <img src="./../assets/img/dashboard/icn_task_calendar.svg" alt="">
+                                                        <span>期限</span>
+                                                    </div>
+                                                    <div class="task__time__date">12月27日</div>
+                                                    <div class="task__time__user">
+                                                        <span>13:00</span>
+                                                        <img src="./../assets/img/dashboard/icn_task_down.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="task__group-btn">
+                                                    <button class="btn btn-cancel">キャンセル</button>
+                                                    <button type="submit" class="btn btn-primary">保存</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="task__list">
+                                        <div class="task__item">
+                                            <div class="task__item__top">
+                                                <h5>キャンセル</h5>
+                                                <div class="task__item__users">
+                                                    <a href="#">
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="task__item__body">
+                                                <div class="task__item__textarea">
+                                                    <textarea name="" id="" cols="30" rows="3" placeholder="キャンセル理由確認中"></textarea>
+                                                </div>
+                                                <button type="submit" class="task__item__btn-submit">完了</button>
+                                                <div class="task__item__bottom">
+                                                    <div class="task__item__user">
+                                                        <div class="task__item__user-tooltip">田中太郎</div>
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                        <span>期限</span>
+                                                    </div>
+                                                    <div class="task__item__time">
+                                                        <span>2022年11月30日　18:00</span>
+                                                    </div>
+                                                    <div class="task__item__action">
+                                                        <a href="#"><img src="./../assets/img/dashboard/icn_task_edit.svg" alt=""></a>
+                                                        <a href="#" data-toggle="modal" data-target="#modal-delete"><img src="./../assets/img/dashboard/icn_task_delete.svg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="task__item">
+                                            <div class="task__item__top">
+                                                <h5>返品</h5>
+                                                <div class="task__item__users">
+                                                    <a href="#">
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="task__item__body">
+                                                <div class="task__item__textarea">
+                                                    <textarea name="" id="" cols="30" rows="3" placeholder="⼀部返⾦提案中"></textarea>
+                                                </div>
+                                                <button type="submit" class="task__item__btn-submit">完了</button>
+                                                <div class="task__item__bottom">
+                                                    <div class="task__item__user">
+                                                        <div class="task__item__user-tooltip">田中太郎</div>
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                        <span>期限</span>
+                                                    </div>
+                                                    <div class="task__item__time">
+                                                        <span>2022年11月30日</span>
+                                                    </div>
+                                                    <div class="task__item__action">
+                                                        <a href="#"><img src="./../assets/img/dashboard/icn_task_edit.svg" alt=""></a>
+                                                        <a href="#" data-toggle="modal" data-target="#modal-delete"><img src="./../assets/img/dashboard/icn_task_delete.svg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="task__item">
+                                            <div class="task__item__top">
+                                                <h5>未着リクエスト</h5>
+                                                <div class="task__item__users">
+                                                    <a href="#">
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="task__item__body">
+                                                <div class="task__item__textarea">
+                                                    <textarea name="" id="" cols="30" rows="3" placeholder="配送会社に配達証明を依頼中"></textarea>
+                                                </div>
+                                                <button type="submit" class="task__item__btn-submit">完了</button>
+                                                <div class="task__item__bottom">
+                                                    <div class="task__item__user">
+                                                        <div class="task__item__user-tooltip">田中太郎</div>
+                                                        <img src="./../assets/img/dashboard/img_user_demo.svg" alt="">
+                                                    </div>
+                                                    <div class="task__item__action">
+                                                        <a href="#"><img src="./../assets/img/dashboard/icn_task_edit.svg" alt=""></a>
+                                                        <a href="#" data-toggle="modal" data-target="#modal-delete"><img src="./../assets/img/dashboard/icn_task_delete.svg" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal edit product -->
+    <div class="modal fade" id="modal-edit-product" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-close" data-dismiss="modal">
+                    <img src="./../assets/img/dashboard/icn_close_modal.svg" alt="">
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="./../assets/img/dashboard/img_product_cover.jpg" alt="">
+                        </div>
+                        <div class="col-9">
+                            col right
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- Modal template -->
+    <div class="modal fade" id="modal-template" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-close" data-dismiss="modal">
+                    <img src="./../assets/img/dashboard/icn_close_modal.svg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h2>テンプレート一覧</h2>
+                    <ul>
+                        <li>
+                            <h5>テンプレート１</h5>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </li>
+                        <li>
+                            <h5>テンプレート 2</h5>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </li>
+                        <li>
+                            <h5>テンプレート 3</h5>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </li>
+                        <li>
+                            <h5>テンプレート 4</h5>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </li>
+                        <li>
+                            <h5>テンプレート 5</h5>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </li>
+                        <li>
+                            <h5>テンプレート 6</h5>
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- Modal delete -->
+    <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>
+                    <img src="./../assets/img/dashboard/icn_delete_noti.svg" alt="">
+                    <span>本当にこのタスクを削除しますか？</span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                <button type="button" class="btn btn-primary">削除</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- Javascript -->
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="./../assets/js/slick.min.js"></script>
+    <script src="./../assets/js/common.js"></script>
+</body>
+
+</html>

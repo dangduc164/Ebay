@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ebay Tool</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../assets/css/slick.css">
+    <link href="./../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="p-dashboard">
+    <div class="p-dashboard__nav-top">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <a href="./../chat/dashboard.html" class="p-dashboard__nav-top__logo">
+                    <img src="./../assets/img/dashboard/fig_logo.svg" alt="">
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="p-dashboard__nav-top__news item-sp">News</a>
+                <div class="p-dashboard__nav-top__search item-pc">
+                    <input type="text" placeholder="バイヤー名・SKU・タイトル・注文番号を検索">
+                    <button>
+                        <img src="./../assets/img/dashboard/icn_search.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-dashboard__nav-top__group-right item-pc">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_building.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_mess.svg" alt="">
+                                <span>26</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_check.svg" alt="">
+                                <span>2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_warning.svg" alt="">
+                                <span>6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_bell.svg" alt="">
+                                <span>12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_setting.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="p-dashboard__nav-top__user" data-toggle="dropdown" data-display="static">
+                                <img src="./../assets/img/dashboard/img_user.png" alt="">
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./info.html">プロフィール</a>
+                                <a class="dropdown-item" href="./change-password.html">パスワード変更</a>
+                                <a class="dropdown-item" href="./help.html">ヘルプ</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="p-dashboard__nav-top__toggle item-sp">
+                    <img src="./../assets/img/dashboard/icn_grid.svg" alt="">
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <section class="p-profile p-profile-payment-add">
+        <div class="container">
+            <div class="p-profile__inner">
+                <div class="p-profile-payment-add__top">
+                    <div class="p-profile-payment-add__bill">
+                        <span>Đơn hàng:</span>
+                        <span class="c-blue">155</span>
+                    </div>
+                    <div class="p-profile-payment-add__cost">
+                        <span>Số tiền:</span>
+                        <span class="c-blue">860.300,36 VND</span>
+                    </div>
+                </div>
+                <form>
+                    <h3>Nhập thông tin để hoàn tất thanh toán</h3>
+                    <div class="form-group">
+                        <label>Số thẻ</label>
+                        <div class="form-group-input">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Chọn loại thẻ</label>
+                        <div class="form-group-radio">
+                            <input type="radio" id="visa" name="payment" class="form-control" placeholder="" checked>
+                            <label for="visa"><img src="./../assets/img/profile/img_visa.png" alt=""></label>
+                        </div>
+                        <div class="form-group-radio">
+                            <input type="radio" id="master-card" name="payment" class="form-control" placeholder="">
+                            <label for="master-card"><img src="./../assets/img/profile/img_master-card.png" alt=""></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày hết hạn</label>
+                        <div class="form-group-select">
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                            <span>/</span>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group security">
+                        <label>Mã số bảo mật</label>
+                        <div class="form-group-input">
+                            <input type="number" class="form-control" placeholder="">
+                        </div>
+                        <a href="#" class="c-blue">Là gì?</a>
+                    </div>
+                    
+                    <h3>Địa chỉ thanh toán</h3>
+                    <div class="form-group">
+                        <label>Địa chỉ <span class="c-red">*</span></label>
+                        <div class="form-group-input">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Quận/Huyện <span class="c-red">*</span></label>
+                        <div class="form-group-input">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tỉnh/Thành phố</label>
+                        <div class="form-group-input">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mã bưu điện</label>
+                        <div class="form-group-input">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Quốc gia <span class="c-red">*</span></label>
+                        <div class="form-group-input">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="./../assets/js/slick.min.js"></script>
+    <script src="./../assets/js/common.js"></script>
+</body>
+
+</html>

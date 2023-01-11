@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ebay Tool</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="./../assets/img/driver/common/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../assets/css/slick.css">
+    <link href="./../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="p-list-accounts-linked">
+    <div class="l-nav-top">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <a href="#" class="l-nav-top__logo">
+                    <img src="./../assets/img/dashboard/fig_logo.svg" alt="">
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="l-nav-top__news item-sp">News</a>
+                <div class="l-nav-top__search item-pc">
+                    <input type="text" placeholder="バイヤー名・SKU・タイトル・注文番号を検索">
+                    <button>
+                        <img src="./../assets/img/dashboard/icn_search.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="l-nav-top__group-right item-pc">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_building.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_mess.svg" alt="">
+                                <span>26</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_check.svg" alt="">
+                                <span>2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_warning.svg" alt="">
+                                <span>6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_bell.svg" alt="">
+                                <span>12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_setting.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="l-nav-top__user" data-toggle="dropdown" data-display="static">
+                                <img src="./../assets/img/dashboard/img_user.png" alt="">
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./../profile/info.html">プロフィール</a>
+                                <a class="dropdown-item" href="#">パスワード変更</a>
+                                <a class="dropdown-item" href="#">ヘルプ</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="l-nav-top__toggle item-sp">
+                    <img src="./../assets/img/dashboard/icn_grid.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <section class="p-list-accounts-linked__main">
+        <div class="container-fluid">
+            <div class="p-list-accounts-linked__main__btn-add">
+                <a class="btn-show-modal" href="#" data-toggle="modal" data-target="#exampleModalCenter">+ アカウントを連携</a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">アカウント連携</h5>
+                                <p class="modal-desc">新しいEbayアカウントを連携する</p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <img src="./../assets/img/list-accounts/icn-close-modal.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="form-item">
+                                        <label for="メールアドレス">メールアドレス</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-item">
+                                        <label for="ID">ID</label>
+                                        <p class="desc">あなたの ebay ID アドレス</p>
+                                        <input id="id" type="text" name="id">
+                                        <a href="#" class="btn-paste">Paste</a>
+                                        <a href="#" class="btn-more"><img src="./../assets/img/list-accounts/icn_more-input.svg" alt=""></a>
+                                    </div>
+                                    <div class="form-item">
+                                        <button class="btn btn-danger" type="submit">確定</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-table item-pc">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="col-table__email" scope="col">Ebayアカウント名</th>
+                                <th class="col-table__date" scope="col">連携日</th>
+                                <th class="col-table__handle" scope="col">ステータス</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ebayアカウント1</td>
+                                <td>2022/11/16 13:41:57</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary">再連携</a>
+                                    <a href="#" class="btn btn-danger">削除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ebayアカウント1</td>
+                                <td>2022/11/16 13:41:57</td>
+                                <td>
+                                    <a href="#" class="btn btn-success">再連携</a>
+                                    <a href="#" class="btn btn-danger">削除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ebayアカウント1</td>
+                                <td>2022/11/16 13:41:57</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary">再連携</a>
+                                    <a href="#" class="btn btn-danger">削除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ebayアカウント1</td>
+                                <td>2022/11/16 13:41:57</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary">再連携</a>
+                                    <a href="#" class="btn btn-danger">削除</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-12 list-accounts item-sp">
+                    <div class="p-list-accounts-linked__main__box">
+                        <div class="p-list-accounts-linked__main__box-content">
+                            <label for="radio-card-1" class="radio-card">
+                                <input type="radio" name="radio-card" id="radio-card-1" checked/>
+                                <div class="card-content-wrapper">
+                                  <span class="check-icon"></span>
+                                  <div class="card-content">
+                                   <div class="card-content-avatar"> 
+                                    <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                </div>
+                                    <div class="card-content-desc">
+                                        <h4>ebayアカウント1</h4>
+                                        <p>Ngày liên kết: <span>2022/11/16 13:41:57</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="p-list-accounts-linked__main__box-handle">
+                            <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                <img src="./../assets/img/list-accounts/icn-trash-2.svg" alt="">
+                                <span>Xóa</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-list-accounts-linked__main__box">
+                        <div class="p-list-accounts-linked__main__box-content">
+                            <label for="radio-card-2" class="radio-card">
+                                <input type="radio" name="radio-card" id="radio-card-2" />
+                                <div class="card-content-wrapper">
+                                  <span class="check-icon"></span>
+                                  <div class="card-content">
+                                    <div class="card-content-avatar"> 
+                                        <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                    </div>
+                                    <div class="card-content-desc">
+                                        <h4>ebayアカウント1</h4>
+                                        <p>Ngày liên kết: <span>2022/11/16 13:41:57</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="p-list-accounts-linked__main__box-handle">
+                            <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                <img src="./../assets/img/list-accounts/icn-trash-2.svg" alt="">
+                                <span>Xóa</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <p>
+                                        <img src="./../assets/img/list-accounts/icn-wraning.svg" alt=""> Xoá tài khoản <span>“Trần Huy Hoàng”</span> ?
+                                    </p>
+                                    <div class="group-handle">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                        <button type="button" class="btn btn-danger">Xóa</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="./../assets/js/slick.min.js"></script>
+    <script src="./../assets/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ebay Tool</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="./../assets/img/driver/common/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../assets/css/slick.css">
+    <link href="./../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="p-list-accounts">
+    <div class="l-nav-top">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <a href="#" class="l-nav-top__logo">
+                    <img src="./../assets/img/dashboard/fig_logo.svg" alt="">
+                </a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="l-nav-top__news item-sp">News</a>
+                <div class="l-nav-top__search item-pc">
+                    <input type="text" placeholder="バイヤー名・SKU・タイトル・注文番号を検索">
+                    <button>
+                        <img src="./../assets/img/dashboard/icn_search.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="l-nav-top__group-right item-pc">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_building.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_mess.svg" alt="">
+                                <span>26</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_check.svg" alt="">
+                                <span>2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_warning.svg" alt="">
+                                <span>6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_bell.svg" alt="">
+                                <span>12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./../assets/img/dashboard/icn_setting.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="l-nav-top__user" data-toggle="dropdown" data-display="static">
+                                <img src="./../assets/img/dashboard/img_user.png" alt="">
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./../profile/info.html">プロフィール</a>
+                                <a class="dropdown-item" href="#">パスワード変更</a>
+                                <a class="dropdown-item" href="#">ヘルプ</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="l-nav-top__toggle item-sp">
+                    <img src="./../assets/img/dashboard/icn_grid.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <section class="p-list-accounts__main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-handle">
+                    <div class="item-pc">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#tab1">サブアカウント</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab2">承認待ち</a>
+                            </li>
+                            <li class="nav-item">
+                                <!--btn show modal-->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    ＋ アカウントを連携
+                                </button>
+                                <!--end btn show modal-->
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="item-sp">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#tab1">サブアカウント</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#tab2">承認待ち</a>
+                            </li>
+                        </ul>
+                        <!--btn show modal-->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                ＋ アカウントを連携
+                            </button>
+                        <!--end btn show modal-->
+                    </div>
+
+                </div>
+                <!--- tab content-->
+                <div class="col-12 col-table">
+                    <div class="tab-content">
+                        <div id="tab1" class="container tab-pane active">
+                            <!---ui pc-->
+                            <table class="table item-pc">
+                                <thead>
+                                    <tr>
+                                        <th class="col-table__number" scope="col">No.</th>
+                                        <th class="col-table__name" scope="col">名前</th>
+                                        <th class="col-table__birthday" scope="col">生年月日</th>
+                                        <th class="col-table__gender" scope="col">性別</th>
+                                        <th class="col-table__email" scope="col">メールアドレス</th>
+                                        <th class="col-table__phone" scope="col">電話番号</th>
+                                        <th class="col-table__address" scope="col">住所</th>
+                                        <th class="col-table__status" scope="col">ステータス</th>
+                                        <th class="col-table__handle" scope="col">編集</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">01</th>
+                                        <td>Trần Huy Hoàng</td>
+                                        <td>29/10/1987</td>
+                                        <td>男</td>
+                                        <td class="email">lawson@example.com</td>
+                                        <td>0123456789</td>
+                                        <td>60, Nguyễn Văn Huyên, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà Nội</td>
+                                        <td class="done">アクティブ</td>
+                                        <td class="d-flex justify-content-center" style="gap: 14px;">
+                                            <button><img src="./../assets/img/list-accounts/icn_edit.svg" alt=""></button>
+                                            <button class="btn-delete"><img src="./../assets/img/task/icn_delete.svg" alt=""></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">02</th>
+                                        <td>Trần Huy Hoàng</td>
+                                        <td>29/10/1987</td>
+                                        <td>男</td>
+                                        <td class="email">lawson@example.com</td>
+                                        <td>0123456789</td>
+                                        <td>60, Nguyễn Văn Huyên, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà Nội</td>
+                                        <td class="done">アクティブ</td>
+                                        <td class="d-flex justify-content-center" style="gap: 14px;">
+                                            <button><img src="./../assets/img/list-accounts/icn_edit.svg" alt=""></button>
+                                            <button class="btn-delete"><img src="./../assets/img/task/icn_delete.svg" alt=""></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">03</th>
+                                        <td>Trần Huy Hoàng</td>
+                                        <td>29/10/1987</td>
+                                        <td>男</td>
+                                        <td class="email">lawson@example.com</td>
+                                        <td>0123456789</td>
+                                        <td>60, Nguyễn Văn Huyên, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà Nội</td>
+                                        <td class="done">アクティブ</td>
+                                        <td class="d-flex justify-content-center" style="gap: 14px;">
+                                            <button><img src="./../assets/img/list-accounts/icn_edit.svg" alt=""></button>
+                                            <button class="btn-delete"><img src="./../assets/img/task/icn_delete.svg" alt=""></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">04</th>
+                                        <td>Trần Huy Hoàng</td>
+                                        <td>29/10/1987</td>
+                                        <td>男</td>
+                                        <td class="email">lawson@example.com</td>
+                                        <td>0123456789</td>
+                                        <td>60, Nguyễn Văn Huyên, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà Nội</td>
+                                        <td class="done">アクティブ</td>
+                                        <td class="d-flex justify-content-center" style="gap: 14px;">
+                                            <button><img src="./../assets/img/list-accounts/icn_edit.svg" alt=""></button>
+                                            <button class="btn-delete"><img src="./../assets/img/task/icn_delete.svg" alt=""></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!---end ui pc-->
+
+                            <!--ui moblie-->
+                            <div class="list-accounts item-sp">
+                                <div class="tab-content__wrap">
+                                    <div class="tab-content__box">
+                                        <div class="tab-content__box__inner">
+                                            <div class="tab-content__box-avatar">
+                                                <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                            </div>
+                                            <div class="tab-content__box-desc">
+                                                <div>
+                                                    <p class="name">Trần Huy Hoàng</p>
+                                                    <p class="status">Đang hoạt động</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content__box-group-btn">
+                                        <button href="#" class="btn btn-primary">
+                                            <img src="./../assets/img/list-accounts/icn-edit-3.svg" alt="">
+                                            <span>Sửa</span>
+                                        </button>
+                                        <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                            <img src="./../assets/img/list-accounts/icn-trash-2.svg" alt="">
+                                            <span>Xóa</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tab-content__wrap">
+                                    <div class="tab-content__box">
+                                        <div class="tab-content__box__inner">
+                                            <div class="tab-content__box-avatar">
+                                                <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                            </div>
+                                            <div class="tab-content__box-desc">
+                                                <div>
+                                                    <p class="name">Trần Huy Hoàng</p>
+                                                    <p class="status">Đang hoạt động</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content__box-group-btn">
+                                        <button href="#" class="btn btn-primary">
+                                            <img src="./../assets/img/list-accounts/icn-edit-3.svg" alt="">
+                                            <span>Sửa</span>
+                                        </button>
+                                        <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                            <img src="./../assets/img/list-accounts/icn-trash-2.svg" alt="">
+                                            <span>Xóa</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tab-content__wrap">
+                                    <div class="tab-content__box">
+                                        <div class="tab-content__box__inner">
+                                            <div class="tab-content__box-avatar">
+                                                <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                            </div>
+                                            <div class="tab-content__box-desc">
+                                                <div>
+                                                    <p class="name">Trần Huy Hoàng</p>
+                                                    <p class="status">Đang hoạt động</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content__box-group-btn">
+                                        <button href="#" class="btn btn-primary">
+                                            <img src="./../assets/img/list-accounts/icn-edit-3.svg" alt="">
+                                            <span>Sửa</span>
+                                        </button>
+                                        <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                            <img src="./../assets/img/list-accounts/icn-trash-2.svg" alt="">
+                                            <span>Xóa</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <p>
+                                                    <img src="./../assets/img/list-accounts/icn-wraning.svg" alt=""> Xoá tài khoản <span>“Trần Huy Hoàng”</span> ?
+                                                </p>
+                                                <div class="group-handle">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                                    <button type="button" class="btn btn-danger">Xóa</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end ui moblie-->
+                        </div>
+                        <div id="tab2" class="container tab-pane fade">
+                            <table class="table item-pc">
+                                <thead>
+                                    <tr>
+                                        <th class="col-table__number" scope="col">No.</th>
+                                        <th class="col-table__name" scope="col">名前</th>
+                                        <th class="col-table__birthday" scope="col">生年月日</th>
+                                        <th class="col-table__gender" scope="col">性別</th>
+                                        <th class="col-table__email" scope="col">メールアドレス</th>
+                                        <th class="col-table__phone" scope="col">電話番号</th>
+                                        <th class="col-table__address" scope="col">住所</th>
+                                        <th class="col-table__status" scope="col">ステータス</th>
+                                        <th class="col-table__handle" scope="col">編集</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">01</th>
+                                        <td>Trần Huy Hoàng</td>
+                                        <td>29/10/1987</td>
+                                        <td>男</td>
+                                        <td class="email">lawson@example.com</td>
+                                        <td>0123456789</td>
+                                        <td>60, Nguyễn Văn Huyên, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà Nội</td>
+                                        <td class="pending">承認待ち</td>
+                                        <td class="d-flex justify-content-center" style="gap: 14px;">
+                                            <button><img src="./../assets/img/list-accounts/icn_edit.svg" alt=""></button>
+                                            <button class="btn-delete"><img src="./../assets/img/task/icn_delete.svg" alt=""></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">02</th>
+                                        <td>Trần Huy Hoàng</td>
+                                        <td>29/10/1987</td>
+                                        <td>男</td>
+                                        <td class="email">lawson@example.com</td>
+                                        <td>0123456789</td>
+                                        <td>60, Nguyễn Văn Huyên, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà Nội</td>
+                                        <td class="pending">承認待ち</td>
+                                        <td class="d-flex justify-content-center" style="gap: 14px;">
+                                            <button><img src="./../assets/img/list-accounts/icn_edit.svg" alt=""></button>
+                                            <button class="btn-delete"><img src="./../assets/img/task/icn_delete.svg" alt=""></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--ui moblie-->
+                            <div class="list-accounts item-sp">
+                                <div class="tab-content__wrap">
+                                    <div class="tab-content__box">
+                                        <div class="tab-content__box__inner">
+                                            <div class="tab-content__box-avatar">
+                                                <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                            </div>
+                                            <div class="tab-content__box-desc">
+                                                <div>
+                                                    <p class="name">Trần Huy Hoàng</p>
+                                                    <p class="status">Đang hoạt động</p>
+                                                </div>
+                                                <div>
+                                                    <p class="tab-content__box-status">Chờ xác nhận</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content__wrap">
+                                    <div class="tab-content__box">
+                                        <div class="tab-content__box__inner">
+                                            <div class="tab-content__box-avatar">
+                                                <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                            </div>
+                                            <div class="tab-content__box-desc">
+                                                <div>
+                                                    <p class="name">Trần Huy Hoàng</p>
+                                                    <p class="status">Đang hoạt động</p>
+                                                </div>
+                                                <div>
+                                                    <p class="tab-content__box-status">Chờ xác nhận</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content__wrap">
+                                    <div class="tab-content__box">
+                                        <div class="tab-content__box__inner">
+                                            <div class="tab-content__box-avatar">
+                                                <img src="./../assets/img/list-accounts/img-avt.png" alt="">
+                                            </div>
+                                            <div class="tab-content__box-desc">
+                                                <div>
+                                                    <p class="name">Trần Huy Hoàng</p>
+                                                    <p class="status">Đang hoạt động</p>
+                                                </div>
+                                                <div>
+                                                    <p class="tab-content__box-status">Chờ xác nhận</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end ui moblie-->
+                        </div>
+                    </div>
+
+                </div>
+                <!--- end tab content -->
+                <!-- Modal -->
+                <div class="p-list-accounts__main__popup">
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">アカウントを連携</h5>
+                                    <button type="button" class="close item-pc" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="./../assets/img/list-accounts/icn-close-modal.svg" alt=""></span>
+                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-item">
+                                            <label for="名前">名前 *</label>
+                                            <input type="text" name="name" />
+                                        </div>
+                                        <div class="form-item">
+                                            <div>
+                                                <label for="生年月日">生年月日</label>
+                                                <input type="date" name="birthday" />
+                                            </div>
+                                            <div>
+                                                <label for="性別">性別</label>
+                                                <select>
+                                    <option value="boy">boy</option>
+                                    <option value="gỉrl">girl</option>
+                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <label for="メールアドレス">メールアドレス *</label>
+                                            <input type="email" name="email" />
+                                        </div>
+                                        <div class="form-item">
+                                            <label for="住所">住所</label>
+                                            <input type="text" name="address" />
+                                        </div>
+                                        <div class="form-item">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                                            <button id="btn-submit" type="submit" class="btn btn-primary">確認</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Modal -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="./../assets/js/slick.min.js"></script>
+    <script src="./../assets/js/common.js"></script>
+</body>
+
+</html>

@@ -13,7 +13,7 @@
     <link href="./../assets/css/style.css" rel="stylesheet">
 </head>
 
-<body class="p-upgrade">
+<body class="p-notice">
     <div class="p-dashboard__nav-top">
         <div class="row align-items-center">
             <div class="col-auto">
@@ -81,9 +81,9 @@
                                 <img src="./../assets/img/dashboard/icn_setting.svg" alt="">
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./../profile/info.html">通知</a>
-                                <a class="dropdown-item" href="#">自動返信</a>
-                                <a class="dropdown-item" href="#">テンプレート</a>
+                                <a class="dropdown-item" href="./../setting/notice.html">通知</a>
+                                <a class="dropdown-item" href="./../setting/auto-reply.html">自動返信</a>
+                                <a class="dropdown-item" href="./../setting/template.html">テンプレート</a>
                                 <a class="dropdown-item" href="#">サブアカウント管理</a>
                                 <a class="dropdown-item" href="#">連携したEbayアカウント管理</a>
                             </div>
@@ -145,57 +145,122 @@
             </div>
         </div>
     </div>
-    <section class="p-upgrade__main">
+
+    <section class="p-notice__main">
         <div class="container">
-            <div class="p-upgrade__main__title">
-                <h3>アカウントをアップグレード</h3>
-                <p>内容テキスト内容テキスト内容テキスト内容テキスト内容テキスト内容テキスト内容テキスト</p>
-            </div>
-            <div class="p-upgrade__main__box">
-                <div class="p-upgrade__main__box__inner">
-                    <div class="p-upgrade__main__box__inner-title">
-                        <h3>一か月/5000円</h3>
-                    </div>
-                    <div class="p-upgrade__main__box__inner-option">
-                        <ul>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>すべての機能を使用</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>プレミアムツール</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>無制限の連携アカウント（最大5つまで）</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>年中無休のサポート</span>
-                                </p>
-                            </li>
-                        </ul>
+            <div class="p-notice__main__inner">
+                <div class="p-notice__main__system-notification">
+                    <div class="p-notice__main__setting">
+                        <h3 class="p-notice__main__setting__title">通知</h3>
+                        <div class="p-notice__main__setting__content">
+                            <div class="form-switch">
+                                <p class="p-notice__main__setting__desc">BayChatに通知の送信を許可する</p>
+                                <label class="c-switch-one">
+                                    <input type="checkbox">
+                                    <span class="c-switch-one-slider"></span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="p-upgrade__main__box-btn">
-                    <a href="#" class="btn btn-primary">
-                        <span>今すぐ購入</span>
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 13L7 7L1 1" stroke="#F43258" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+                <div class="p-notice__main__system-auto-trans">
+                    <div class="p-notice__main__setting">
+                        <h3 class="p-notice__main__setting__title">自動翻訳設定</h3>
+                        <div class="p-notice__main__setting__content">
+                            <div class="form-switch">
+                                <p class="p-notice__main__setting__desc">Google翻訳</p>
+                                <label class="c-switch-one">
+                                    <input type="checkbox" checked>
+                                    <span class="c-switch-one-slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-switch">
+                                <p class="p-notice__main__setting__desc">Deepl翻訳</p>
+                                <label class="c-switch-one">
+                                    <input type="checkbox">
+                                    <span class="c-switch-one-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-notice__main__system-notification-one">
+                    <div class="p-notice__main__setting">
+                        <h3 class="p-notice__main__setting__title">通知設定</h3>
+                        <div class="p-notice__main__setting__content">
+                            <div class="form-switch">
+                                <p class="p-notice__main__setting__desc">連携したEbayアカウント１<span>(3fzY***1Pr2)</span></p>
+                                <label class="c-switch-one">
+                                    <input type="checkbox" checked>
+                                    <span class="c-switch-one-slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="message" checked>
+                                <label class="p-notice__main__setting__desc" for="message">メッセージ通知を受け取る</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="order" checked>
+                                <label class="p-notice__main__setting__desc" for="order">注文通知を受け取る</label>
+                            </div>
+                        </div>
+                        <div class="p-notice__main__setting__content">
+                            <div class="form-switch">
+                                <p class="p-notice__main__setting__desc">連携したEbayアカウント2<span>(3fzY***1Pr2)</span></p>
+                                <label class="c-switch-one">
+                                    <input type="checkbox" checked>
+                                    <span class="c-switch-one-slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="message" checked>
+                                <label class="p-notice__main__setting__desc" for="message">メッセージ通知を受け取る</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="order">
+                                <label class="p-notice__main__setting__desc" for="order">注文通知を受け取る</label>
+                            </div>
+                        </div>
+                        <div class="p-notice__main__setting__content">
+                            <div class="form-switch">
+                                <p class="p-notice__main__setting__desc">連携したEbayアカウント3<span>(3fzY***1Pr2)</span></p>
+                                <label class="c-switch-one">
+                                    <input type="checkbox" checked>
+                                    <span class="c-switch-one-slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="message" checked>
+                                <label class="p-notice__main__setting__desc" for="message">メッセージ通知を受け取る</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="order">
+                                <label class="p-notice__main__setting__desc" for="order">注文通知を受け取る</label>
+                            </div>
+                        </div>
+                        <div class="p-notice__main__setting__content">
+                            <div class="form-switch">
+                                <p class="p-notice__main__setting__desc">連携したEbayアカウント4<span>(3fzY***1Pr2)</span></p>
+                                <label class="c-switch-one">
+                                    <input type="checkbox" checked>
+                                    <span class="c-switch-one-slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="message">
+                                <label class="p-notice__main__setting__desc" for="message">メッセージ通知を受け取る</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="order" checked>
+                                <label class="p-notice__main__setting__desc" for="order">注文通知を受け取る</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Javascript -->
     <script src="./../assets/js/jquery.min.js"></script>
     <script src="./../assets/js/jquery-ui.min.js"></script>

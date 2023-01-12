@@ -13,7 +13,7 @@
     <link href="./../assets/css/style.css" rel="stylesheet">
 </head>
 
-<body class="p-upgrade">
+<body class="p-auto-reply">
     <div class="p-dashboard__nav-top">
         <div class="row align-items-center">
             <div class="col-auto">
@@ -81,9 +81,9 @@
                                 <img src="./../assets/img/dashboard/icn_setting.svg" alt="">
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./../profile/info.html">通知</a>
-                                <a class="dropdown-item" href="#">自動返信</a>
-                                <a class="dropdown-item" href="#">テンプレート</a>
+                                <a class="dropdown-item" href="./../setting/notice.html">通知</a>
+                                <a class="dropdown-item" href="./../setting/auto-reply.html">自動返信</a>
+                                <a class="dropdown-item" href="./../setting/template.html">テンプレート</a>
                                 <a class="dropdown-item" href="#">サブアカウント管理</a>
                                 <a class="dropdown-item" href="#">連携したEbayアカウント管理</a>
                             </div>
@@ -145,57 +145,107 @@
             </div>
         </div>
     </div>
-    <section class="p-upgrade__main">
+
+    <section class="p-auto-reply__main">
         <div class="container">
-            <div class="p-upgrade__main__title">
-                <h3>アカウントをアップグレード</h3>
-                <p>内容テキスト内容テキスト内容テキスト内容テキスト内容テキスト内容テキスト内容テキスト</p>
-            </div>
-            <div class="p-upgrade__main__box">
-                <div class="p-upgrade__main__box__inner">
-                    <div class="p-upgrade__main__box__inner-title">
-                        <h3>一か月/5000円</h3>
-                    </div>
-                    <div class="p-upgrade__main__box__inner-option">
-                        <ul>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>すべての機能を使用</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>プレミアムツール</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>無制限の連携アカウント（最大5つまで）</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="./../assets/img/dashboard/icn-check-circle-red.svg" alt="">
-                                    <span>年中無休のサポート</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="p-auto-reply__main__inner">
+                <div class="p-auto-reply__main__inner-title">
+                    <h3>自動返信</h3>
+                    <p>
+                        全ての新規メッセージに対しての自動メッセージ<br>営業時間外 例：日本時間の金曜18:00-月曜日9:00はOffice closedメッセージ
+                    </p>
                 </div>
-                <div class="p-upgrade__main__box-btn">
-                    <a href="#" class="btn btn-primary">
-                        <span>今すぐ購入</span>
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 13L7 7L1 1" stroke="#F43258" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+                <div class="p-auto-reply__main__inner__setting">
+                    <div class="p-auto-reply__main__inner__setting-item">
+                        <h4>商品が売れた時</h4>
+                        <label class="c-switch-one">
+                            <input type="checkbox" checked>
+                            <span class="c-switch-one-slider"></span>
+                        </label>
+                    </div>
+                    <div class="p-auto-reply__main__inner__setting-item">
+                        <h4>Offerが成立した時</h4>
+                        <label class="c-switch-one">
+                            <input type="checkbox" checked>
+                            <span class="c-switch-one-slider"></span>
+                        </label>
+                    </div>
+                    <div class="p-auto-reply__main__inner__setting-item">
+                        <h4>商品を発送した時</h4>
+                        <label class="c-switch-one">
+                            <input type="checkbox" checked>
+                            <span class="c-switch-one-slider"></span>
+                        </label>
+                    </div>
+                    <div class="p-auto-reply__main__inner__setting-item">
+                        <h4>商品が配達済みになった時</h4>
+                        <label class="c-switch-one">
+                            <input type="checkbox" checked>
+                            <span class="c-switch-one-slider"></span>
+                        </label>
+                    </div>
+                    <div class="p-auto-reply__main__inner__setting-item">
+                        <h4>商品が配達されてからN日後</h4>
+                        <label class="c-switch-one">
+                            <input type="checkbox" checked>
+                            <span class="c-switch-one-slider"></span>
+                        </label>
+                    </div>
+                    <div class="p-auto-reply__main__inner__setting-item select">
+                        <h4>時間設定</h4>
+                        <div class="form-group">
+                            <div class="form-group-select">
+                                <select name="" id="">
+                                    <option value="">23:00</option>
+                                    <option value="">00:00</option>
+                                </select>
+                                <span>/</span>
+                                <select name="" id="">
+                                    <option value="">07:30</option>
+                                    <option value="">08:30</option>
+                                    <option value="">09:30</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-auto-reply__main__inner__setting-item radio">
+                        <h4>曜日設定</h4>
+                        <div class="form-radio">
+                            <p>
+                                <input type="radio" id="test1" name="radio-group" checked>
+                                <label for="test1">月曜日</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test2" name="radio-group">
+                                <label for="test2">火曜日</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test3" name="radio-group">
+                                <label for="test3">水曜日</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test4" name="radio-group">
+                                <label for="test4">木曜日</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test5" name="radio-group">
+                                <label for="test5">金曜日</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test6" name="radio-group">
+                                <label for="test6">土曜日</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test7" name="radio-group">
+                                <label for="test7">日曜日</label>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Javascript -->
     <script src="./../assets/js/jquery.min.js"></script>
     <script src="./../assets/js/jquery-ui.min.js"></script>

@@ -65,8 +65,9 @@ input, textarea {
 }
 
 .btn{
-	&:focus,&:focus-visible{
-		box-shadow: none
+	&:focus,&:focus-visible,&:active{
+		box-shadow: none;
+		border-color: none;
 	}
 }
 @include clearfixBase;
